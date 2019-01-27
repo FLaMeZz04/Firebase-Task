@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Firebase Sync Task</string>
+    <string name="hello">Hello</string>
+    <string name="_0">0</string>
+    <string name="firebase_fetch">Firebase Fetch</string>
+    <string name="save_data">Save Data</string>
+</resources>

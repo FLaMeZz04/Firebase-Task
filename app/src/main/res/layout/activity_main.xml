@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+   <RelativeLayout
+       android:id="@+id/toolbar"
+       android:background="#964178"
+       android:layout_width="match_parent"
+       android:layout_height="60dp">
+
+      <TextView
+          android:layout_marginStart="20dp"
+          android:layout_centerVertical="true"
+          android:textColor="#fff"
+          android:fontFamily="@font/roboto_medium"
+          android:text="@string/firebase_fetch"
+          android:textSize="22sp"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content" />
+
+   </RelativeLayout>
+
+   <io.supercharge.shimmerlayout.ShimmerLayout
+       android:id="@+id/shimmerLayout"
+       android:layout_width="match_parent"
+      android:layout_margin="10dp"
+      android:layout_below="@+id/toolbar"
+       app:shimmer_animation_duration="1500"
+       android:layout_height="match_parent">
+
+      <LinearLayout
+          android:orientation="vertical"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+
+      <include layout="@layout/shimmer_layout" />
+      <include layout="@layout/shimmer_layout"/>
+      <include layout="@layout/shimmer_layout"/>
+      <include layout="@layout/shimmer_layout"/>
+         <include layout="@layout/shimmer_layout"/>
+         <include layout="@layout/shimmer_layout"/>
+         <include layout="@layout/shimmer_layout"/>
+         <include layout="@layout/shimmer_layout"/>
+      </LinearLayout>
+
+
+   </io.supercharge.shimmerlayout.ShimmerLayout>
+
+<android.support.v7.widget.RecyclerView
+    android:id="@+id/recyclerView"
+    android:layout_below="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="?actionBarSize"/>
+
+
+   <Button
+       android:id="@+id/saveButton"
+       android:text="@string/save_data"
+       android:fontFamily="@font/roboto_medium"
+       android:layout_centerHorizontal="true"
+       android:textAllCaps="false"
+       android:textColor="#fff"
+       android:background="@drawable/custom_button"
+       android:layout_alignParentBottom="true"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content" />
+
+</RelativeLayout>
